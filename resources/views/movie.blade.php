@@ -6,13 +6,12 @@
     <div class="grid">
         @foreach ($movies as $movie)
             <div>
+                <p class="og-title">{{ $movie->original_title }}</p>
                 <h1>{{ $movie->title }}</h1>
-                <h3>{{ $movie->original_title }}</h3>
-                <p>{{ $movie->nationality }}</p>
-                <p>{{ $movie->date }}</p>
-                <p>{{ $movie->vote }}</p>
+                <p>Nationality: {{ $movie->nationality }}</p>
+                <p>Date: {{ $movie->date }}</p>
+                <p>Vote: {{ $movie->vote }}</p>
             </div>
         @endforeach
-        @dump($movies[0])
     </div>
 @endsection
